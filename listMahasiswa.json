@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "userId": 1,
+      "id": 4,
+      "nim": "1841720197",
+      "nama": "Altalarik Yusuf",
+      "alamat": "Malang",
+      "hp": "08312312",
+      "angkatan": "2018",
+      "status": "aktif"
+    },
+    {
+      "userId": 1,
+      "id": 1614786533270,
+      "nim": "1841720191",
+      "nama": "Sadewa Mukti",
+      "alamat": "Banyuwangi",
+      "hp": "08312311",
+      "angkatan": "2018",
+      "status": "aktif"
+    },
+    {
+      "userId": 1,
+      "id": 1614787476296,
+      "nim": "1841720195",
+      "nama": "Nilam Yuniari",
+      "alamat": "Tulungagung",
+      "hp": "08312311",
+      "angkatan": "2018",
+      "status": "aktif"
+    },
+    {
+      "userId": 1,
+      "id": 1615080333285,
+      "nim": "1841720190",
+      "nama": "Fajar Pandu",
+      "alamat": "Malang",
+      "hp": "081291923",
+      "angkatan": "2018",
+      "status": "aktif"
+    }
+  ]
+}
