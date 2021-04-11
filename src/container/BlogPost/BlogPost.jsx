@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './BlogPost.css';
 import Post from "../../component/BlogPost/Post"
+import API from "../../services/index"
 
 class BlogPost extends Component {
     state = {
@@ -20,11 +21,10 @@ class BlogPost extends Component {
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3001/posts?_sort=id&_order=desc')
-            .then(response => response.json())
-            .then(jsonHasilAmbilDariAPI => {
+        API.getNewsBlog()
+            .then(result => {
                 this.setState({
-                    listMhs: jsonHasilAmbilDariAPI
+                    listMhs: result
                 })
             })
     }
@@ -34,8 +34,8 @@ class BlogPost extends Component {
     }
 
     handleHapusMhs = (data) => {
-        fetch(`http://localhost:3001/posts/${data}`, { method: 'DELETE' })
-            .then(res => {
+        API.deleteNewsBlog(data)
+            .then(Response => {
                 this.ambilDataDariServerAPI()
             })
     }
@@ -51,23 +51,17 @@ class BlogPost extends Component {
     }
 
     handleTombolSimpan = () => {
-        fetch(`http://localhost:3001/posts/`, {
-            method: `post`,
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.state.insertMhs)
-        })
-            .then((response: Response) => {
+        API.postNewsBlog(this.state.insertMhs)
+            .then((Response) => {
                 this.ambilDataDariServerAPI();
-            })
+            });
     }
 
     render() {
         return (
             <div className="post-Mhs">
-                <div className="form pb-2 border-bottom">
+                <div className="form pb-2 border-bottom mt-3">
+                    <h2 className="text-center mb-3">Form Data Mahasiswa</h2>
                     <div className="form-group row">
                         <label htmlFor="title" className="col-sm-2 col-form-label">NIM</label>
                         <div className="col-sm-10">

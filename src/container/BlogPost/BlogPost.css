@@ -1,26 +1,74 @@
-.Mhs {
+.isiKonten {
+    margin-top: 50px;
+    color: black;
+}
+
+.artikel {
     width: 100%;
+    border: 1px solid rgb(233, 168, 84);
     padding: 10px;
-    border: 1px solid blue;
     border-radius: 4px;
     margin-bottom: 10px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
     display: flex;
 }
 
-.gambar-Mhs {
-    height: 80px;
-    width: 80px;
+.gambar-artikel {
+    height: 160px;
+    width: 160px;
     margin-right: 20px;
     vertical-align: top;
 }
 
-.konten-Mhs {
-    flex: 1;
-}
-
-.gambar-Mhs img {
+.gambar-artikel img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.konten-artikel {
+    flex: 1;
+}
+
+.konten-artikel div.judul-artikel {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.konten-artikel p.isi-artikel {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.TopBar {
+    border: 1px solid rgb(58, 184, 75);
+    /* margin-top: -250px; */
+    border-radius: 5px;
+    width: 1110px;
+    padding: 10px 10px 0px 10px;
+    /* position:fixed; */
+    background-color: rgb(58, 184, 75);
+}
+
+#simpan {
+    width: 100%;
+    background-color: rgb(35, 88, 42);
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 20px 0px;
+    color: black;
+
+}
+
+label {
+    color: black;
+}
+
+.container {
+    height: 100%;
 }
